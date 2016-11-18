@@ -1,5 +1,5 @@
-{% set version = "1.0.7" %}
-{% set sha256 = "b94158c9dd09d3af79acf0ea06ed0084d4645b0ea1b62168f10929260731b14e" %}
+{% set version = "1.1.1" %}
+{% set sha256 = "98dc28d73f96a2ed08e779c7c87f02e27dabd6379e6ac60353b2f43b1bc9af6a" %}
 
 package:
     name: keras
@@ -50,3 +50,4 @@ extra:
     recipe-maintainers:
         - ericdill
         - mariusvniekerk
+        - ghego
