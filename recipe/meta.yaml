@@ -29,17 +29,10 @@ requirements:
         - six
         - theano
 
+
 test:
-    imports:
-        - keras
-        - keras.backend
-        - keras.datasets
-        - keras.engine
-        - keras.layers
-        - keras.legacy
-        - keras.preprocessing
-        - keras.utils
-        - keras.wrappers
+    requires:
+        - nose
 
 about:
     home: https://github.com/fchollet/keras
