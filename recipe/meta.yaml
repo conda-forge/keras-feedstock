@@ -30,8 +30,6 @@ requirements:
         - theano
 
 test:
-    script_env:
-        - KERAS_BACKEND=theano
     imports:
         - keras
         - keras.backend
