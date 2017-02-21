@@ -11,8 +11,8 @@ source:
     sha256: {{ sha256 }}
 
 build:
+  skip: true  # [win]
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
     build:
@@ -23,11 +23,11 @@ requirements:
         - numpy
         - setuptools
         - scipy
-        - tensorflow <=1.0  # [not win]
+        - tensorflow <=1.0  # [osx]
         - python
         - pyyaml
         - six
-        - theano
+        - theano  # [win or linux]
 
 test:
     imports:
