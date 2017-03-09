@@ -1,5 +1,5 @@
-{% set version = "1.0.7" %}
-{% set sha256 = "b94158c9dd09d3af79acf0ea06ed0084d4645b0ea1b62168f10929260731b14e" %}
+{% set version = "1.2.2" %}
+{% set sha256 = "786f7a98a09c1217e7c76c2fb485440c3675c7188bf7d9afcd4e5c75fc97406e" %}
 
 package:
     name: keras
@@ -11,8 +11,8 @@ source:
     sha256: {{ sha256 }}
 
 build:
+  skip: true  # [win]
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
     build:
@@ -23,11 +23,11 @@ requirements:
         - numpy
         - setuptools
         - scipy
-        - tensorflow  # [not win]
+        - tensorflow <=1.0  # [osx]
         - python
         - pyyaml
         - six
-        - theano
+        - theano  # [win or linux]
 
 test:
     imports:
@@ -36,7 +36,6 @@ test:
         - keras.datasets
         - keras.engine
         - keras.layers
-        - keras.legacy
         - keras.preprocessing
         - keras.utils
         - keras.wrappers
@@ -50,3 +49,4 @@ extra:
     recipe-maintainers:
         - ericdill
         - mariusvniekerk
+        - croth1
