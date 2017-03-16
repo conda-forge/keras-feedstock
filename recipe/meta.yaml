@@ -1,5 +1,5 @@
-{% set version = "1.2.2" %}
-{% set sha256 = "786f7a98a09c1217e7c76c2fb485440c3675c7188bf7d9afcd4e5c75fc97406e" %}
+{% set version = "2.0.0" %}
+{% set sha256 = "1cfe5c298be813a512549f993e4d4fdfe0f887a8e67f7bf915fda6089ac9d403" %}
 
 package:
     name: keras
@@ -23,7 +23,7 @@ requirements:
         - numpy
         - setuptools
         - scipy
-        - tensorflow <=1.0  # [osx]
+        - tensorflow <=1.0.1  # [osx]
         - python
         - pyyaml
         - six
