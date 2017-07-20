@@ -1,5 +1,5 @@
-{% set version = "2.0.2" %}
-{% set sha256 = "4639c266bbadb24366687004bf7404019aee667812aba87f600299f90ad7cf64" %}
+{% set version = "2.0.4" %}
+{% set sha256 = "2988421421ca0fd91738cd327e4b12998bff28b2e106a576835dc211fa093486" %}
 
 package:
     name: keras
@@ -11,7 +11,7 @@ source:
     sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
 
 requirements:
     build:
