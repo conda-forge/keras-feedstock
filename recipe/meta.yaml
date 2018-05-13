@@ -19,13 +19,13 @@ requirements:
         - setuptools
     run:
         - h5py
-        - numpy
+        - numpy >=1.9.1
         - setuptools
-        - scipy
+        - scipy >=0.14
         - tensorflow <=1.0.1  # [osx]
         - python
         - pyyaml
-        - six
+        - six >=1.9.0
         - theano  # [win or linux]
 
 test:
