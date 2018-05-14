@@ -40,7 +40,7 @@ test:
         - keras.wrappers
 
 about:
-    home: https://github.com/fchollet/keras
+    home: https://github.com/keras-team/keras
     license: MIT
     license_file: LICENSE
     summary: Deep Learning for Python
