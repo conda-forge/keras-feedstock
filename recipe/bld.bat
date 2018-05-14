@@ -1,5 +1,8 @@
 setlocal EnableDelayedExpansion
 
+"%PYTHON%" setup.py install --single-version-externally-managed --record=record.txt
+if errorlevel 1 exit 1
+
 :: Copy the [de]activate scripts to %PREFIX%\etc\conda\[de]activate.d.
 :: This will allow them to be run on environment activation.
 FOR %%F IN (activate deactivate) DO (
@@ -9,6 +12,3 @@ FOR %%F IN (activate deactivate) DO (
 
 IF NOT EXIST %PREFIX%\etc\keras MKDIR %PREFIX%\etc\keras
 COPY %RECIPE_DIR%\load_config.py %PREFIX%\etc\keras\load_config.py
-
-"%PYTHON%" setup.py install --single-version-externally-managed --record=record.txt
-if errorlevel 1 exit 1
