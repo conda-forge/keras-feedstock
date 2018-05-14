@@ -1,7 +1,7 @@
 About keras
 ===========
 
-Home: https://github.com/fchollet/keras
+Home: https://github.com/keras-team/keras
 
 Package license: MIT
 
