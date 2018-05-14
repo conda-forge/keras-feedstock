@@ -16,7 +16,7 @@ build:
 requirements:
     build:
         - python
-        - setuptools
+        - pip
     run:
         - h5py
         - numpy >=1.9.1
