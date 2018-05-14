@@ -42,6 +42,7 @@ test:
 about:
     home: https://github.com/fchollet/keras
     license: MIT
+    license_file: LICENSE
     summary: Deep Learning for Python
 
 extra:
