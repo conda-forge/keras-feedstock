@@ -22,11 +22,11 @@ requirements:
         - numpy >=1.9.1
         - setuptools
         - scipy >=0.14
-        - tensorflow <=1.0.1  # [osx]
+        - tensorflow     # [not (win and py27)]
         - python
         - pyyaml
         - six >=1.9.0
-        - theano  # [win or linux]
+        - theano         # [win and py27]
 
 test:
     imports:
