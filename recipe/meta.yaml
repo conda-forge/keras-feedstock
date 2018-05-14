@@ -20,7 +20,6 @@ requirements:
     run:
         - h5py
         - numpy >=1.9.1
-        - setuptools
         - scipy >=0.14
         - tensorflow     # [not (win and py27)]
         - python
