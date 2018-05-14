@@ -9,3 +9,6 @@ do
     mkdir -p "${PREFIX}/etc/conda/${CHANGE}.d"
     cp "${RECIPE_DIR}/${CHANGE}.sh" "${PREFIX}/etc/conda/${CHANGE}.d/keras_${CHANGE}.sh"
 done
+
+mkdir -p "${PREFIX}/etc/keras"
+cp "${RECIPE_DIR}/load_config.py" "${PREFIX}/etc/keras/load_config.py"
