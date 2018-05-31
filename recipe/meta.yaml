@@ -6,7 +6,7 @@ package:
     version: {{ version }}
 
 source:
-    url: https://github.com/fchollet/keras/archive/{{ version }}.tar.gz
+    url: https://github.com/keras-team/keras/archive/{{ version }}.tar.gz
     fn: keras-{{ version }}.tar.gz
     sha256: {{ sha256 }}
 
