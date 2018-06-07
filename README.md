@@ -1,7 +1,7 @@
 About keras
 ===========
 
-Home: https://github.com/fchollet/keras
+Home: https://github.com/keras-team/keras
 
 Package license: MIT
 
@@ -14,14 +14,16 @@ Summary: Deep Learning for Python
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/keras-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/keras-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/keras-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/keras-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/keras-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/keras-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/keras-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/keras-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/keras-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/keras-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/keras-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/keras-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/keras/badges/version.svg)](https://anaconda.org/conda-forge/keras)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/keras/badges/downloads.svg)](https://anaconda.org/conda-forge/keras)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-keras-green.svg)](https://anaconda.org/conda-forge/keras) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/keras.svg)](https://anaconda.org/conda-forge/keras) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/keras.svg)](https://anaconda.org/conda-forge/keras) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/keras.svg)](https://anaconda.org/conda-forge/keras) |
 
 Installing keras
 ================
