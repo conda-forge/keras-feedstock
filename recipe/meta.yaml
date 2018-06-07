@@ -6,7 +6,7 @@ package:
     version: {{ version }}
 
 source:
-    url: https://github.com/fchollet/keras/archive/{{ version }}.tar.gz
+    url: https://github.com/keras-team/keras/archive/{{ version }}.tar.gz
     fn: keras-{{ version }}.tar.gz
     sha256: {{ sha256 }}
 
@@ -16,17 +16,16 @@ build:
 requirements:
     build:
         - python
-        - setuptools
+        - pip
     run:
         - h5py
-        - numpy
-        - setuptools
-        - scipy
-        - tensorflow <=1.0.1  # [osx]
+        - numpy >=1.9.1
+        - scipy >=0.14
+        - tensorflow     # [not (win and py27)]
         - python
         - pyyaml
-        - six
-        - theano  # [win or linux]
+        - six >=1.9.0
+        - theano
 
 test:
     imports:
@@ -40,8 +39,9 @@ test:
         - keras.wrappers
 
 about:
-    home: https://github.com/fchollet/keras
+    home: https://github.com/keras-team/keras
     license: MIT
+    license_file: LICENSE
     summary: Deep Learning for Python
 
 extra:
