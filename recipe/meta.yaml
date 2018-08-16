@@ -1,51 +1,52 @@
-{% set version = "2.1.6" %}
-{% set sha256 = "88734b83105a7f3aecfe52153db9f47cf7ab5a44c613922d43dc6d8b646f484e" %}
+{% set version = "2.2.2" %}
 
 package:
-    name: keras
-    version: {{ version }}
+  name: keras
+  version: {{ version }}
 
 source:
-    url: https://github.com/keras-team/keras/archive/{{ version }}.tar.gz
-    fn: keras-{{ version }}.tar.gz
-    sha256: {{ sha256 }}
+  url: https://github.com/keras-team/keras/archive/{{ version }}.tar.gz
+  sha256: 76a7110a0f7b6114bfcf9453057a7e3c65e3957791336423b09a7420fc3de3a8
 
 build:
   number: 0
 
 requirements:
-    build:
-        - python
-        - pip
-    run:
-        - h5py
-        - numpy >=1.9.1
-        - scipy >=0.14
-        - tensorflow     # [not (win and py27)]
-        - python
-        - pyyaml
-        - six >=1.9.0
-        - theano
+  host:
+    - python
+    - pip
+  run:
+    - python
+    - h5py
+    - numpy
+    - scipy >=0.14
+    - tensorflow     # [not (win and py27)]
+    - pyyaml
+    - six >=1.9.0
+    - theano
+    - keras-applications =1.0.4
+    - keras-preprocessing =1.0.2
 
 test:
-    imports:
-        - keras
-        - keras.backend
-        - keras.datasets
-        - keras.engine
-        - keras.layers
-        - keras.preprocessing
-        - keras.utils
-        - keras.wrappers
+  imports:
+    - keras
+    - keras.backend
+    - keras.datasets
+    - keras.engine
+    - keras.layers
+    - keras.preprocessing
+    - keras.utils
+    - keras.wrappers
 
 about:
-    home: https://github.com/keras-team/keras
-    license: MIT
-    license_file: LICENSE
-    summary: Deep Learning for Python
+  home: https://github.com/keras-team/keras
+  license: MIT
+  license_file: LICENSE
+  summary: Deep Learning for Python
 
 extra:
-    recipe-maintainers:
-        - ericdill
-        - mariusvniekerk
-        - croth1
+  recipe-maintainers:
+    - ericdill
+    - mariusvniekerk
+    - croth1
+    - ocefpaf
