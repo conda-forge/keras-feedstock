@@ -1,6 +1,6 @@
 setlocal EnableDelayedExpansion
 
-"%PYTHON%" -m pip install --no-deps --ignore-installed .
+"%PYTHON%" -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 if errorlevel 1 exit 1
 
 :: Copy the [de]activate scripts to %PREFIX%\etc\conda\[de]activate.d.
