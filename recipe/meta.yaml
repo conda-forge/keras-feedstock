@@ -1,48 +1,94 @@
+{% set name = "Keras" %}
 {% set version = "2.2.2" %}
 
 package:
-  name: keras
+  name: keras_split
   version: {{ version }}
 
 source:
-  url: https://github.com/keras-team/keras/archive/{{ version }}.tar.gz
-  sha256: 76a7110a0f7b6114bfcf9453057a7e3c65e3957791336423b09a7420fc3de3a8
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 468d98da104ec5c3dbb10c2ef6bb345ab154f6ca2d722d4c250ef4d6105de17a
 
 build:
   number: 0
+  # Tensorflow is not available on all platforms, skip those where it is not
+  skip: True  # [win32 or linux32]
+  skip: True  # [win64 and py27]
 
-requirements:
-  host:
-    - python
-    - pip
-  run:
-    - python
-    - h5py
-    - numpy
-    - scipy >=0.14
-    - tensorflow     # [not (win and py27)]
-    - pyyaml
-    - six >=1.9.0
-    - theano
-    - keras-applications =1.0.4
-    - keras-preprocessing =1.0.2
 
-test:
-  imports:
-    - keras
-    - keras.backend
-    - keras.datasets
-    - keras.engine
-    - keras.layers
-    - keras.preprocessing
-    - keras.utils
-    - keras.wrappers
+outputs:
+  - name: keras-base
+    script: install_base.sh
+    requirements:
+      build:
+        - python
+        - pip
+      run:
+        - python
+        - numpy >=1.9.1
+        - scipy >=0.14
+        - six >=1.9.0
+        - pyyaml
+        - h5py
+        - keras-applications 1.0.4
+        - keras-preprocessing 1.0.2
+      # add run_constrained to prevent installation of mismatched keras and
+      # keras-base packages
+      run_constrained:
+        - keras {{ version }}
+    test:
+      requires:
+        - tensorflow
+      imports:
+        - keras
+        - keras.backend
+        - keras.datasets
+        - keras.engine
+        - keras.layers
+        - keras.legacy
+        - keras.preprocessing
+        - keras.utils
+        - keras.wrappers
 
-about:
-  home: https://github.com/keras-team/keras
-  license: MIT
-  license_file: LICENSE
-  summary: Deep Learning for Python
+  - name: keras
+    requirements:
+      run:
+        - keras-base {{ version }}
+        - tensorflow
+    about:
+      home: https://github.com/fchollet/keras
+      license: MIT
+      license_family: MIT
+      license_file: LICENSE
+      summary: Deep Learning Library for Theano and TensorFlow
+      description: |
+        Keras is a minimalist, highly modular neural networks library
+        written in Python and capable on running on top of either
+        TensorFlow or Theano. It was developed with a focus on enabling
+        fast experimentation. Being able to go from idea to result with
+        the least possible delay is key to doing good research.
+      doc_url: http://keras.io
+      dev_url: https://github.com/fchollet/keras
+
+  - name: keras-gpu
+    requirements:
+      run:
+        - keras-base {{ version }}
+        - tensorflow-gpu
+    about:
+      home: https://github.com/fchollet/keras
+      license: MIT
+      license_family: MIT
+      license_file: LICENSE
+      summary: Deep Learning Library for Theano and TensorFlow
+      description: |
+        Keras is a minimalist, highly modular neural networks library
+        written in Python and capable on running on top of either
+        TensorFlow or Theano. It was developed with a focus on enabling
+        fast experimentation. Being able to go from idea to result with
+        the least possible delay is key to doing good research.
+      doc_url: http://keras.io
+      dev_url: https://github.com/fchollet/keras
 
 extra:
   recipe-maintainers:
