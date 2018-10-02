@@ -1,13 +1,12 @@
-{% set name = "Keras" %}
-{% set version = "2.2.2" %}
+{% set version = "2.2.3" %}
 
 package:
   name: keras_split
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 468d98da104ec5c3dbb10c2ef6bb345ab154f6ca2d722d4c250ef4d6105de17a
+  url: https://github.com/keras-team/keras/archive/{{ version }}.tar.gz
+  sha256: efe2dd704f0ba55a1d621b92b2b466ed077d7cc907eb64f1263e1f812e34b560
 
 build:
   number: 0
