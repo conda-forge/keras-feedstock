@@ -1,4 +1,4 @@
-{% set version = "2.2.3" %}
+{% set version = "2.2.4" %}
 
 package:
   name: keras
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/keras-team/keras/archive/{{ version }}.tar.gz
-  sha256: efe2dd704f0ba55a1d621b92b2b466ed077d7cc907eb64f1263e1f812e34b560
+  sha256: 46f8e5bd66f778abd8d5a62b3c3d749fbd41854176fcf0df5258cf94c3fd1b28
 
 build:
   number: 0
