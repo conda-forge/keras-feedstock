@@ -9,7 +9,7 @@ source:
   sha256: 46f8e5bd66f778abd8d5a62b3c3d749fbd41854176fcf0df5258cf94c3fd1b28
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -18,14 +18,14 @@ requirements:
   run:
     - python
     - h5py
-    - numpy
+    - numpy >=1.9.1
     - scipy >=0.14
     - tensorflow     # [not (win and py27)]
     - pyyaml
     - six >=1.9.0
     - theano
-    - keras-applications =1.0.4
-    - keras-preprocessing =1.0.2
+    - keras-applications >=1.0.6
+    - keras-preprocessing =1.0.5
 
 test:
   imports:
