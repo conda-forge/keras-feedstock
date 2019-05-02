@@ -25,7 +25,7 @@ requirements:
     - six >=1.9.0
     - theano
     - keras-applications >=1.0.6
-    - keras-preprocessing =1.0.5
+    - keras-preprocessing >=1.0.5
 
 test:
   imports:
@@ -50,3 +50,4 @@ extra:
     - mariusvniekerk
     - croth1
     - ocefpaf
+    - jjhelmus
