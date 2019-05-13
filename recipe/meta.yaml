@@ -23,7 +23,6 @@ requirements:
     - tensorflow     # [not (win and py27)]
     - pyyaml
     - six >=1.9.0
-    - theano
     - keras-applications >=1.0.6
     - keras-preprocessing >=1.0.5
 
