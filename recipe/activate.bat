@@ -8,6 +8,6 @@ del temp.txt
 python -c "import keras" 1> nul 2>&1
 if errorlevel 1 (
     ver > nul
-    set "KERAS_BACKEND=theano"
+    set "KERAS_BACKEND=tensorflow"
     python -c "import keras" 1> nul 2>&1
 )
