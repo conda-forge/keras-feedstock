@@ -7,6 +7,6 @@ KERAS_BACKEND="$(python ${CONDA_PREFIX}/etc/keras/load_config.py)"
 # Fallback to Theano if it fails (Theano always works).
 python -c "import keras" &>/dev/null || {
     test "true";
-    export KERAS_BACKEND="theano"
+    export KERAS_BACKEND="tensorflow"
     python -c "import keras" &>/dev/null
 }
