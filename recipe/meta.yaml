@@ -9,7 +9,7 @@ source:
   sha256: 149c281194976e2799bea423d192d8520606d5ddec5bf776d7dd30244f67d94f
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -24,8 +24,8 @@ requirements:
     - pyyaml
     - six >=1.9.0
     - theano
-    - keras-applications >=1.0.6
-    - keras-preprocessing >=1.0.5
+    - keras-applications >=1.0.8
+    - keras-preprocessing >=1.1.0
 
 test:
   imports:
