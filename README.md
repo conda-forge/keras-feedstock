@@ -15,14 +15,7 @@ Current build status
 ====================
 
 
-<table><tr>
-    <td>Appveyor</td>
-    <td>
-      <a href="https://ci.appveyor.com/project/conda-forge/keras-feedstock/branch/master">
-        <img alt="windows" src="https://img.shields.io/appveyor/ci/conda-forge/keras-feedstock/master.svg?label=Windows">
-      </a>
-    </td>
-  </tr>
+<table>
     
   <tr>
     <td>Azure</td>
@@ -78,24 +71,17 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>win_python2.7</td>
+              <td>win_python3.6vc14</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3067&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/keras-feedstock?branchName=master&jobName=win&configuration=win_python2.7" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/keras-feedstock?branchName=master&jobName=win&configuration=win_python3.6vc14" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_python3.6</td>
+              <td>win_python3.7vc14</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3067&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/keras-feedstock?branchName=master&jobName=win&configuration=win_python3.6" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_python3.7</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3067&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/keras-feedstock?branchName=master&jobName=win&configuration=win_python3.7" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/keras-feedstock?branchName=master&jobName=win&configuration=win_python3.7vc14" alt="variant">
                 </a>
               </td>
             </tr>
