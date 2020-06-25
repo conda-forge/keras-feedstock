@@ -1,32 +1,28 @@
-{% set version = "2.3.1" %}
+{% set version = "2.4.3" %}
 
 package:
   name: keras
   version: {{ version }}
 
 source:
-  url: https://github.com/keras-team/keras/archive/{{ version }}.tar.gz
-  sha256: 7e8df9c5291f21a01bccffd8cbdd44abd7d2679ab2f7a892a503e88291627183
+  url: https://pypi.io/packages/source/K/Keras/Keras-{{ version }}.tar.gz
+  sha256: fedd729b52572fb108a98e3d97e1bac10a81d3917d2103cc20ab2a5f03beb973
 
 build:
-  skip: True  # [win and vc<14]
+  noarch: python
   number: 0
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
-    - h5py
+    - python >=3.6
     - numpy >=1.9.1
     - scipy >=0.14
-    - tensorflow     # [not (win and py27)]
     - pyyaml
-    - six >=1.9.0
-    - theano
-    - keras-applications >=1.0.8
-    - keras-preprocessing >=1.1.0
+    - h5py
+    - tensorflow >=2.2
 
 test:
   imports:
