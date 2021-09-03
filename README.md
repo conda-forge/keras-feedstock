@@ -3,7 +3,7 @@ About keras
 
 Home: https://github.com/keras-team/keras
 
-Package license: MIT
+Package license: Apache-2.0
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/keras-feedstock/blob/master/LICENSE.txt)
 
@@ -36,6 +36,7 @@ Installing `keras` from the `conda-forge` channel can be achieved by adding `con
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `keras` can be installed with:
@@ -115,7 +116,7 @@ Feedstock Maintainers
 =====================
 
 * [@croth1](https://github.com/croth1/)
-* [@jjhelmus](https://github.com/jjhelmus/)
 * [@mariusvniekerk](https://github.com/mariusvniekerk/)
 * [@ocefpaf](https://github.com/ocefpaf/)
+* [@xhochy](https://github.com/xhochy/)
 
