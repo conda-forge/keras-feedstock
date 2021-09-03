@@ -1,14 +1,17 @@
-{% set version = "2.4.3" %}
+{% set version = "2.6.0" %}
 
 package:
   name: keras
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/K/Keras/Keras-{{ version }}.tar.gz
-  sha256: fedd729b52572fb108a98e3d97e1bac10a81d3917d2103cc20ab2a5f03beb973
+  - url: https://pypi.io/packages/py2.py3/k/keras/keras-{{ version }}-py2.py3-none-any.whl
+    sha256: 504af5656a9829fe803ce48a8580ef16916e89906aceddad9e098614269437e7
+  - url: https://raw.githubusercontent.com/keras-team/keras/v{{ version }}/LICENSE
+    sha256: ebc07b279109d4bd5e58fe06f54e8f8aee8ba1024b77b222bc04214ae6f56348
 
 build:
+  script: {{ PYTHON }} -m pip install -vv keras-{{ version }}-py2.py3-none-any.whl
   noarch: python
   number: 0
 
@@ -18,26 +21,21 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - numpy >=1.9.1
-    - scipy >=0.14
-    - pyyaml
-    - h5py
-    - tensorflow >=2.2
+  run_constrained:
+    - tensorflow {{ version }}.*
 
 test:
-  imports:
-    - keras
-    - keras.backend
-    - keras.datasets
-    - keras.engine
-    - keras.layers
-    - keras.preprocessing
-    - keras.utils
-    - keras.wrappers
+  requires:
+    - pip
+  commands:
+    - pip check
+  # Cyclic dependency with tensorflow
+  # imports:
+  #  - keras
 
 about:
   home: https://github.com/keras-team/keras
-  license: MIT
+  license: Apache-2.0
   license_file: LICENSE
   summary: Deep Learning for Python
 
@@ -46,3 +44,4 @@ extra:
     - mariusvniekerk
     - croth1
     - ocefpaf
+    - xhochy
