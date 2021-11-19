@@ -1,4 +1,4 @@
-{% set version = "2.6.0" %}
+{% set version = "2.7.0" %}
 {% set major_minor = ".".join(version.split(".")[:2]) %}
 
 package:
@@ -7,14 +7,14 @@ package:
 
 source:
   - url: https://pypi.io/packages/py2.py3/k/keras/keras-{{ version }}-py2.py3-none-any.whl
-    sha256: 504af5656a9829fe803ce48a8580ef16916e89906aceddad9e098614269437e7
+    sha256: 0c33ae1f728064ca0d35dfba999e9c316f03623bf5688c82fb83cc74a80ea248
   - url: https://raw.githubusercontent.com/keras-team/keras/v{{ version }}/LICENSE
     sha256: ebc07b279109d4bd5e58fe06f54e8f8aee8ba1024b77b222bc04214ae6f56348
 
 build:
   script: {{ PYTHON }} -m pip install -vv keras-{{ version }}-py2.py3-none-any.whl
   noarch: python
-  number: 1
+  number: 0
 
 requirements:
   host:
