@@ -22,8 +22,6 @@ requirements:
     - pip
   run:
     - python >=3.6
-  run_constrained:
-    - tensorflow {{ major_minor }}.*
 
 test:
   requires:
