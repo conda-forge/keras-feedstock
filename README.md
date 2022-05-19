@@ -144,6 +144,7 @@ Feedstock Maintainers
 =====================
 
 * [@croth1](https://github.com/croth1/)
+* [@hmaarrfk](https://github.com/hmaarrfk/)
 * [@mariusvniekerk](https://github.com/mariusvniekerk/)
 * [@ocefpaf](https://github.com/ocefpaf/)
 * [@xhochy](https://github.com/xhochy/)
