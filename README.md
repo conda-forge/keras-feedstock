@@ -1,11 +1,11 @@
-About keras
-===========
+About keras-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/keras-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/keras-team/keras
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/keras-feedstock/blob/main/LICENSE.txt)
 
 Summary: Deep Learning for Python
 
@@ -146,6 +146,7 @@ Feedstock Maintainers
 * [@croth1](https://github.com/croth1/)
 * [@hmaarrfk](https://github.com/hmaarrfk/)
 * [@mariusvniekerk](https://github.com/mariusvniekerk/)
+* [@ngam](https://github.com/ngam/)
 * [@ocefpaf](https://github.com/ocefpaf/)
 * [@xhochy](https://github.com/xhochy/)
 
