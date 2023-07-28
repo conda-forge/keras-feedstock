@@ -1,4 +1,4 @@
-{% set version = "2.12.0" %}
+{% set version = "2.13.1" %}
 {% set major_minor = ".".join(version.split(".")[:2]) %}
 
 package:
@@ -6,22 +6,23 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://pypi.io/packages/py2.py3/k/keras/keras-{{ version }}-py2.py3-none-any.whl
-    sha256: 35c39534011e909645fb93515452e98e1a0ce23727b55d4918b9c58b2308c15e
+  - url: https://pypi.io/packages/py3/k/keras/keras-{{ version }}-py3-none-any.whl
+    sha256: 5ce5f706f779fa7330e63632f327b75ce38144a120376b2ae1917c00fa6136af
   - url: https://raw.githubusercontent.com/keras-team/keras/v{{ version }}/LICENSE
     sha256: 58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd
 
 build:
-  script: {{ PYTHON }} -m pip install -vv keras-{{ version }}-py2.py3-none-any.whl
+  script: {{ PYTHON }} -m pip install -vv keras-{{ version }}-py3-none-any.whl
   noarch: python
   number: 0
 
 requirements:
   host:
-    - python >=3.6
+    # see https://github.com/keras-team/keras/blob/master/oss_setup.py
+    - python >=3.8
     - pip
   run:
-    - python >=3.6
+    - python >=3.8
   run_constrained:
     - tensorflow {{ major_minor }}.*
 
