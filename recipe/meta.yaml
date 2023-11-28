@@ -38,7 +38,7 @@ test:
   commands:
     - pip check
   imports:
-   - keras
+   - KERAS_BACKEND=numpy keras
 
 about:
   home: https://github.com/keras-team/keras
