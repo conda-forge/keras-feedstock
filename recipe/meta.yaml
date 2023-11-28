@@ -12,7 +12,7 @@ source:
   sha256: f7de0fdc2000ee3f98119b382b4068548cf260fa145728b16306fc2c7cb9015c
 
 build:
-  script: {{ PYTHON }} -m pip install -vv keras-{{ version }}-py3-none-any.whl
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
   number: 0
 
