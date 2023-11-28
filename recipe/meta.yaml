@@ -8,7 +8,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/keras-team/keras/releases/download/v{{ version }}/keras-{{ version }}.tar.gz
+  url: https://github.com/keras-team/keras/archive/refs/tags/v{{ version }}.tar.gz
   sha256: f7de0fdc2000ee3f98119b382b4068548cf260fa145728b16306fc2c7cb9015c
 
 build:
