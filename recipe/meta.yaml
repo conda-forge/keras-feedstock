@@ -37,8 +37,9 @@ test:
     - pip
   commands:
     - pip check
-  imports:
-   - KERAS_BACKEND=numpy keras
+    # even the numpy backend requires jax....
+    # https://github.com/keras-team/keras/issues/18840
+    # - KERAS_BACKEND=numpy python -c "import keras"
 
 about:
   home: https://github.com/keras-team/keras
