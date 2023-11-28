@@ -1,4 +1,4 @@
-{% set version = "2.15.0" %}
+{% set version = "3.0.0" %}
 {% set major_minor = ".".join(version.split(".")[:2]) %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://pypi.io/packages/py3/k/keras/keras-{{ version }}-py3-none-any.whl
-    sha256: 2dcc6d2e30cf9c951064b63c1f4c404b966c59caf09e01f3549138ec8ee0dd1f
+    sha256: ff3f3efa2aa5cc134b1d8b85693aab32558b1d9c860630a13f58934e6d1c908d
   - url: https://raw.githubusercontent.com/keras-team/keras/v2.14.0/LICENSE
     sha256: 58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd
 
