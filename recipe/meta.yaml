@@ -1,15 +1,15 @@
-{% set version = "2.15.0" %}
-{% set major_minor = ".".join(version.split(".")[:2]) %}
+{% set version = "3.0.0" %}
+# Must manually check the file
+# https://github.com/keras-team/keras/blob/v{{ version }}/requirements-tensorflow-cuda.txt
+{% set tf_major_minor = "2.16" %}
 
 package:
   name: keras
   version: {{ version }}
 
 source:
-  - url: https://pypi.io/packages/py3/k/keras/keras-{{ version }}-py3-none-any.whl
-    sha256: 2dcc6d2e30cf9c951064b63c1f4c404b966c59caf09e01f3549138ec8ee0dd1f
-  - url: https://raw.githubusercontent.com/keras-team/keras/v2.14.0/LICENSE
-    sha256: 58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd
+  url: https://github.com/keras-team/keras/releases/download/v{{ version }}/keras-{{ version }}.tar.gz
+  sha256: f7de0fdc2000ee3f98119b382b4068548cf260fa145728b16306fc2c7cb9015c
 
 build:
   script: {{ PYTHON }} -m pip install -vv keras-{{ version }}-py3-none-any.whl
@@ -19,21 +19,26 @@ build:
 requirements:
   host:
     # see https://github.com/keras-team/keras/blob/master/oss_setup.py
-    - python >=3.8
+    - python >=3.9
     - pip
   run:
-    - python >=3.8
+    - python >=3.9
+    - absl-py
+    - numpy
+    - rich
+    - namex
+    - h5py
+    - dm-tree
   run_constrained:
-    - tensorflow {{ major_minor }}.*
+    - tensorflow {{ tf_major_minor }}
 
 test:
   requires:
     - pip
   commands:
     - pip check
-  # Cyclic dependency with tensorflow
-  # imports:
-  #  - keras
+  imports:
+   - keras
 
 about:
   home: https://github.com/keras-team/keras
