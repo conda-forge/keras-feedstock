@@ -1,7 +1,6 @@
 {% set version = "3.0.0" %}
-# Must manually check the file
-# https://github.com/keras-team/keras/blob/v{{ version }}/requirements-tensorflow-cuda.txt
-{% set tf_major_minor = "2.16" %}
+# Version bump reminder: Must manually check the file constraints to ensure they match those in
+# https://keras.io/getting_started/#compatibility-matrix
 
 package:
   name: keras
@@ -30,7 +29,9 @@ requirements:
     - h5py
     - dm-tree
   run_constrained:
-    - tensorflow {{ tf_major_minor }}
+    - tensorflow >=2.15.0,<2.17.0a
+    - jax 0.4.20
+    - torch 2.1.0
 
 test:
   requires:
