@@ -1,4 +1,4 @@
-{% set version = "3.0.0" %}
+{% set version = "3.0.1" %}
 # Version bump reminder: Must manually check the file constraints to ensure they match those in
 # https://keras.io/getting_started/#compatibility-matrix
 
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/keras-team/keras/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: f7de0fdc2000ee3f98119b382b4068548cf260fa145728b16306fc2c7cb9015c
+  sha256: 69f1a5174ccd98fc5db80ab8a195442f88b3a18bc5df72482df417f142aabad0
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
