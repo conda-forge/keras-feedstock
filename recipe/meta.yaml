@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/keras-team/keras/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: db632678126ae6fb8d7398cb3c3cf0b0842850c7ad803e743b86a5d55cb32fa4
+  sha256: 84d47841c665f0685912ed759edef965e1c6ba504a5ec2e4c5f04d1307da5f7b
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
