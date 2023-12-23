@@ -1,39 +1,46 @@
-{% set version = "2.15.0" %}
-{% set major_minor = ".".join(version.split(".")[:2]) %}
+{% set version = "3.0.2" %}
+# Version bump reminder: Must manually check the file constraints to ensure they match those in
+# https://keras.io/getting_started/#compatibility-matrix
 
 package:
   name: keras
   version: {{ version }}
 
 source:
-  - url: https://pypi.io/packages/py3/k/keras/keras-{{ version }}-py3-none-any.whl
-    sha256: 2dcc6d2e30cf9c951064b63c1f4c404b966c59caf09e01f3549138ec8ee0dd1f
-  - url: https://raw.githubusercontent.com/keras-team/keras/v2.14.0/LICENSE
-    sha256: 58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd
+  url: https://github.com/keras-team/keras/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 84d47841c665f0685912ed759edef965e1c6ba504a5ec2e4c5f04d1307da5f7b
 
 build:
-  script: {{ PYTHON }} -m pip install -vv keras-{{ version }}-py3-none-any.whl
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
   number: 0
 
 requirements:
   host:
     # see https://github.com/keras-team/keras/blob/master/oss_setup.py
-    - python >=3.8
+    - python >=3.9
     - pip
   run:
-    - python >=3.8
+    - python >=3.9
+    - absl-py
+    - numpy
+    - rich
+    - namex
+    - h5py
+    - dm-tree
   run_constrained:
-    - tensorflow {{ major_minor }}.*
+    - tensorflow >=2.15.0,<2.17.0a
+    - jax 0.4.20
+    - torch 2.1.0
 
 test:
   requires:
     - pip
   commands:
     - pip check
-  # Cyclic dependency with tensorflow
-  # imports:
-  #  - keras
+    # even the numpy backend requires jax....
+    # https://github.com/keras-team/keras/issues/18840
+    # - KERAS_BACKEND=numpy python -c "import keras"
 
 about:
   home: https://github.com/keras-team/keras
