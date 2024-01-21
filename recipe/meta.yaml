@@ -1,5 +1,7 @@
-{% set version = "3.0.2" %}
-# Version bump reminder: Must manually check the file constraints to ensure they match those in
+{% set version = "3.0.4" %}
+# Version bump reminder: Must manually check the file constraints to ensure 
+# they match those similar to
+# 2024/01 hmaarrfk -- However we have found that these get somewhat stale
 # https://keras.io/getting_started/#compatibility-matrix
 
 package:
@@ -8,7 +10,7 @@ package:
 
 source:
   url: https://github.com/keras-team/keras/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 84d47841c665f0685912ed759edef965e1c6ba504a5ec2e4c5f04d1307da5f7b
+  sha256: 38d5787f0c1264a6c5bd9fcb1493ee7245a22b2d8027c62f507ad4884671fdf5
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -30,8 +32,8 @@ requirements:
     - dm-tree
   run_constrained:
     - tensorflow >=2.15.0,<2.17.0a
-    - jax 0.4.20
-    - torch 2.1.0
+    - jax 0.4
+    - torch 2.1
 
 test:
   requires:
