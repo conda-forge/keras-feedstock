@@ -30,8 +30,8 @@ requirements:
     - dm-tree
   run_constrained:
     - tensorflow >=2.15.0,<2.17.0a
-    - jax 0.4.20
-    - torch 2.1.0
+    - jax 0.4
+    - torch 2.1
 
 test:
   requires:
