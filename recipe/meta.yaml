@@ -1,5 +1,7 @@
 {% set version = "3.0.4" %}
-# Version bump reminder: Must manually check the file constraints to ensure they match those in
+# Version bump reminder: Must manually check the file constraints to ensure 
+# they match those similar to
+# 2024/01 hmaarrfk -- However we have found that these get somewhat stale
 # https://keras.io/getting_started/#compatibility-matrix
 
 package:
