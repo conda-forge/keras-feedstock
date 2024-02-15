@@ -1,4 +1,4 @@
-{% set version = "3.0.4" %}
+{% set version = "3.0.5" %}
 # Version bump reminder: Must manually check the file constraints to ensure 
 # they match those similar to
 # 2024/01 hmaarrfk -- However we have found that these get somewhat stale
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/keras-team/keras/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 38d5787f0c1264a6c5bd9fcb1493ee7245a22b2d8027c62f507ad4884671fdf5
+  sha256: 0e23205f2d8f434ded17ca9efb116cdb7b6d19736e576456c28aea685a7f195f
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -30,6 +30,7 @@ requirements:
     - namex
     - h5py
     - dm-tree
+    - ml_dtypes
   run_constrained:
     - tensorflow >=2.15.0,<2.17.0a
     - jax 0.4
