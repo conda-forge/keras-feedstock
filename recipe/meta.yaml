@@ -30,7 +30,7 @@ requirements:
     - namex
     - h5py
     - dm-tree
-    - ml-dtypes
+    - ml_dtypes
   run_constrained:
     - tensorflow >=2.15.0,<2.17.0a
     - jax 0.4
