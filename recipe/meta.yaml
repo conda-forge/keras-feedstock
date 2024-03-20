@@ -47,7 +47,6 @@ test:
   requires:
     # check if it exists a version that satisfy the run_constrained
     - jax
-    - torch
 
 about:
   home: https://github.com/keras-team/keras
