@@ -49,6 +49,7 @@ test:
     - jax
     - pip
     - pytorch
+    - packaging
 
 about:
   home: https://github.com/keras-team/keras
