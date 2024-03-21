@@ -13,9 +13,9 @@ source:
   sha256: efcf3e3e7806dfd7016b8e1bf50e9247390231010b1bcf2217c2d79a1e70e5ae
 
 build:
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} pip_build.py --install
   noarch: python
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -33,17 +33,19 @@ requirements:
     - ml_dtypes
   run_constrained:
     - tensorflow >=2.15.0,<2.17.0a
-    - jax 0.4
-    - torch 2.1
+    - jax 0.4.*
+    - torch 2.1.*
 
 test:
   requires:
     - pip
+    - jax
   commands:
     - pip check
-    # even the numpy backend requires jax....
-    # https://github.com/keras-team/keras/issues/18840
-    # - KERAS_BACKEND=numpy python -c "import keras"
+    - KERAS_BACKEND=numpy python -c "import keras"
+    - python -c "import keras; print(keras.applications.MobileNetV2)"
+  imports:
+    - keras
 
 about:
   home: https://github.com/keras-team/keras
