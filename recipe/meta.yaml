@@ -23,6 +23,7 @@ requirements:
     - python >=3.9
     - pip
     - namex
+    - pytorch
   run:
     - python >=3.9
     - absl-py
