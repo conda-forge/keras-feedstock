@@ -37,8 +37,6 @@ requirements:
     - pytorch 2.1.*
 
 test:
-  requires:
-    - pip
   commands:
     - pip check
     # even the numpy backend requires jax....
@@ -47,6 +45,7 @@ test:
   requires:
     # check if it exists a version that satisfy the run_constrained
     - jax
+    - pip
 
 about:
   home: https://github.com/keras-team/keras
