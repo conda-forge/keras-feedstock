@@ -39,11 +39,10 @@ requirements:
 test:
   requires:
     - pip
+    - jax
   commands:
     - pip check
-    # even the numpy backend requires jax....
-    # https://github.com/keras-team/keras/issues/18840
-    # - KERAS_BACKEND=numpy python -c "import keras"
+    - KERAS_BACKEND=numpy python -c "import keras"
 
 about:
   home: https://github.com/keras-team/keras
