@@ -43,6 +43,7 @@ test:
   commands:
     - pip check
     - KERAS_BACKEND=numpy python -c "import keras"
+    - KERAS_BACKEND=jax python -c "import keras"
 
 about:
   home: https://github.com/keras-team/keras
