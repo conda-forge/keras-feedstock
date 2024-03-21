@@ -22,6 +22,7 @@ requirements:
     # see https://github.com/keras-team/keras/blob/master/oss_setup.py
     - python >=3.9
     - pip
+    - namex
   run:
     - python >=3.9
     - absl-py
@@ -29,12 +30,12 @@ requirements:
     - rich
     - namex
     - h5py
-    - dm-tree
+    - optree
     - ml_dtypes
   run_constrained:
     - tensorflow >=2.15.0,<2.17.0a
     - jax 0.4.*
-    - torch 2.1.*
+    - pytorch 2.1.*
 
 test:
   requires:
