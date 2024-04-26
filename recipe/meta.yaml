@@ -35,6 +35,7 @@ requirements:
     - tensorflow >=2.15.0,<2.17.0a
     - jax 0.4.*
     - pytorch >=2.1,<2.3
+    - packaging
 
 test:
   requires:
