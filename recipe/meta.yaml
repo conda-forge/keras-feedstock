@@ -48,6 +48,9 @@ test:
     - pip check
     - KERAS_BACKEND=numpy python -c "import keras"
     - KERAS_BACKEND=jax python -c "import keras"
+    # https://github.com/conda-forge/keras-feedstock/issues/91
+    - echo "test ! -d ${SP_DIR}/benchmarks"
+    - test ! -d ${SP_DIR}/benchmarks
 
 about:
   home: https://github.com/keras-team/keras
