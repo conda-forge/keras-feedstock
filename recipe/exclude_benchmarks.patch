@@ -7,5 +7,5 @@ index 822eccfa7..5ae7e3662 100644
          "Topic :: Software Development",
      ],
 -    packages=find_packages(exclude=("*_test.py",)),
-+    packages=find_packages(exclude=("*_test.py", "benchmarks")),
++    packages=find_packages(include=("keras", "keras.*",), exclude=("*_test.py", "benchmarks")),
  )
