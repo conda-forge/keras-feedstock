@@ -38,6 +38,8 @@ requirements:
   run_constrained:
     - tensorflow >=2.15.0,<2.17.0a
     - jax 0.4.*
+    # Still incompatible with pytorch 2.3
+    # https://github.com/keras-team/keras/issues/19765
     - pytorch >=2.1,<2.3
 
 test:
