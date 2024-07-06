@@ -1,5 +1,5 @@
 {% set version = "3.4.1" %}
-# Version bump reminder: Must manually check the file constraints to ensure 
+# Version bump reminder: Must manually check the file constraints to ensure
 # they match those similar to
 # 2024/01 hmaarrfk -- However we have found that these get somewhat stale
 # https://keras.io/getting_started/#compatibility-matrix
@@ -11,11 +11,14 @@ package:
 source:
   url: https://github.com/keras-team/keras/archive/refs/tags/v{{ version }}.tar.gz
   sha256: fc36516fe8eb807480948385bc1ec3b6ebc64fdd963b645ff763d6e30ad72f66
+  patches:
+    # https://github.com/keras-team/keras/pull/19956
+    - 19956_pytorch_2.3_compatibility.patch
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -33,9 +36,10 @@ requirements:
     - ml_dtypes
     - packaging
   run_constrained:
+    # https://github.com/keras-team/keras/blob/master/requirements.txt
     - tensorflow >=2.15.0,<2.17.0a
     - jax 0.4.*
-    - pytorch >=2.1,<2.3
+    - pytorch >=2.1.0
 
 test:
   requires:
