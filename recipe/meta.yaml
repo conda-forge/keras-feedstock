@@ -1,4 +1,4 @@
-{% set version = "3.4.1" %}
+{% set version = "3.5.0" %}
 # Version bump reminder: Must manually check the file constraints to ensure
 # they match those similar to
 # 2024/01 hmaarrfk -- However we have found that these get somewhat stale
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/keras-team/keras/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: fc36516fe8eb807480948385bc1ec3b6ebc64fdd963b645ff763d6e30ad72f66
+  sha256: 59feb3a9c96032c71ae451cc9831a4680afc2f86af2746716d0cae2ab173ce28
   patches:
     # https://github.com/keras-team/keras/pull/19956
     - 19956_pytorch_2.3_compatibility.patch
@@ -18,7 +18,7 @@ source:
 build:
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
-  number: 2
+  number: 0
 
 requirements:
   host:
