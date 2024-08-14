@@ -15,7 +15,7 @@ source:
 build:
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -34,8 +34,11 @@ requirements:
     - packaging
   run_constrained:
     # https://github.com/keras-team/keras/blob/master/requirements.txt
+    # 2024/08/14 - hmaarrfk
+    # They are rather poorly documented, so we are leaving them as lower bounds for
+    # now
     - tensorflow >=2.15.0
-    - jax 0.4.*
+    - jax >=0.4.0
     - pytorch >=2.1.0
 
 test:
