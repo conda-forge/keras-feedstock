@@ -22,6 +22,7 @@ requirements:
     # see https://github.com/keras-team/keras/blob/master/oss_setup.py
     - python >=3.9
     - pip
+    - setuptools
   run:
     - python >=3.9
     - absl-py
