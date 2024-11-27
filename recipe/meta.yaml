@@ -20,11 +20,11 @@ build:
 requirements:
   host:
     # see https://github.com/keras-team/keras/blob/master/oss_setup.py
-    - python >=3.9
+    - python {{ python_min }}
     - pip
-    - setuptools
+    - setuptools >=61.0
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - absl-py
     - numpy
     - rich
@@ -45,6 +45,7 @@ requirements:
 test:
   requires:
     - pip
+    - python {{ python_min }}
     - jax
   commands:
     - pip check
