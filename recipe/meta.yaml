@@ -1,4 +1,4 @@
-{% set version = "3.6.0" %}
+{% set version = "3.7.0" %}
 # Version bump reminder: Must manually check the file constraints to ensure
 # they match those similar to
 # 2024/01 hmaarrfk -- However we have found that these get somewhat stale
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/keras-team/keras/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 474cc5755054a1dbc71c87655c001eb411ce149988e14b1a5dae375d35e0457d
+  sha256: 58d694715329c4db728d61ceb63195a1191f6bc0de8da77ae7789e687fb92b6f
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
