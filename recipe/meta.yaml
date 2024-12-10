@@ -9,13 +9,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/keras-team/keras/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 58d694715329c4db728d61ceb63195a1191f6bc0de8da77ae7789e687fb92b6f
-
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/keras-{{ version }}.tar.gz
+  sha256: a4451a5591e75dfb414d0b84a3fd2fb9c0240cc87ebe7e397f547ce10b0e67b7
+  
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
-  number: 0
+  number: 1
 
 requirements:
   host:
