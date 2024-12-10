@@ -13,7 +13,7 @@ source:
   sha256: 58d694715329c4db728d61ceb63195a1191f6bc0de8da77ae7789e687fb92b6f
 
 build:
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
   number: 0
 
@@ -47,10 +47,13 @@ test:
     - pip
     - python {{ python_min }}
     - jax
+    - tensorflow
   commands:
     - pip check
     - KERAS_BACKEND=numpy python -c "import keras"
     - KERAS_BACKEND=jax python -c "import keras"
+  imports:
+    - tensorflow.keras
 
 about:
   home: https://github.com/keras-team/keras
