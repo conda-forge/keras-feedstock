@@ -1,4 +1,4 @@
-{% set version = "3.9.0" %}
+{% set version = "3.9.1" %}
 # Version bump reminder: Must manually check the file constraints to ensure
 # they match those similar to
 # 2024/01 hmaarrfk -- However we have found that these get somewhat stale
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/keras-{{ version }}.tar.gz
-  sha256: b5bf04e7c64c3176eda5124d035005bb7a676fb505f42496c7b03a99d5683652
+  sha256: 1ba893820258d4eab9a5a94a6faae2d8f4b134019d0bfa19868606b6381502ff
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
