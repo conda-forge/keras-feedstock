@@ -39,9 +39,9 @@ requirements:
     # 2024/08/14 - hmaarrfk
     # They are rather poorly documented, so we are leaving them as lower bounds for
     # now
-    - tensorflow >=2.15.0
+    - tensorflow >=2.18.0
     - jax >=0.4.0
-    - pytorch >=2.1.0
+    - pytorch >=2.6.0
 
 test:
   requires:
