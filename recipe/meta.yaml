@@ -1,4 +1,4 @@
-{% set version = "3.11.2" %}
+{% set version = "3.12.0" %}
 {% set python_min = "3.10" %}
 # Version bump reminder: Must manually check the file constraints to ensure
 # they match those similar to
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/keras-{{ version }}.tar.gz
-  sha256: b78a4af616cbe119e88fa973d2b0443b70c7f74dd3ee888e5026f0b7e78a2801
+  sha256: 536e3f8385a05ae04e82e08715a1a59988578087e187b04cb0a6fad11743f07f
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
@@ -39,9 +39,9 @@ requirements:
     # 2024/08/14 - hmaarrfk
     # They are rather poorly documented, so we are leaving them as lower bounds for
     # now
-    - tensorflow >=2.15.0
-    - jax >=0.4.0
-    - pytorch >=2.1.0
+    - tensorflow >=2.18.0
+    - jax >=0.5.0
+    - pytorch >=2.6.0
 
 test:
   requires:
