@@ -1,4 +1,4 @@
-{% set version = "3.12.0" %}
+{% set version = "3.13.1" %}
 {% set python_min = "3.10" %}
 # Version bump reminder: Must manually check the file constraints to ensure
 # they match those similar to
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/keras-{{ version }}.tar.gz
-  sha256: 536e3f8385a05ae04e82e08715a1a59988578087e187b04cb0a6fad11743f07f
+  sha256: 670c726dfc9c357fe7ae5ef1c15d8f61ee7fbb40ae9a091a458ec6444a772480
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
@@ -25,6 +25,7 @@ requirements:
     - pip
     - setuptools >=61.0
   run:
+    - ml-dtypes
     - python >={{ python_min }}
     - absl-py
     - numpy
